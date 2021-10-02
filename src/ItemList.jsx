@@ -83,7 +83,7 @@ function crearPromesas() {
 }
 
 
-function Promesas(){
+function ItemList(){
     const [items,setItems] = React.useState(null);
     const [estado,setEstado] = useState('Cargando...');
 
@@ -129,4 +129,4 @@ function Promesas(){
     )  
 }
 
-export default Promesas;
+export default ItemList;
