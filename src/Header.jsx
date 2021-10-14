@@ -1,6 +1,9 @@
-import CustomNav from "./CustomNav";
+import CustomNav from "./componentes/CustomNav";
 import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container"
+import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
+import Logo from "./assets/logo.png"
+
 
 const {Brand,Collapse,Toggle} = Navbar
 const Header = () => {
@@ -8,7 +11,9 @@ const Header = () => {
         <Navbar as="header" expand="md" bg="dark" variant="dark">
             <Container fluid>
                 <Brand>
-                    <h1>LAS ALBARELLO</h1>
+                    <Link to="/">
+                        <img src={Logo} alt="logo_img" width="200px" />
+                    </Link>
                 </Brand>
                 <Toggle />
                 <Collapse>
