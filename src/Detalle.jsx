@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import productos from '../../productos.json';
+import ItemCount from './componentes/itemCount';
 
 function Detalle(props) {
 
@@ -30,6 +30,7 @@ function Detalle(props) {
             {datos.category} - {datos.price}
             </p>
         </div>
+        <ItemCount stock={5} initial={1}/>
         </div>
       </div>
     )

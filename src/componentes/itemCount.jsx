@@ -3,33 +3,35 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 
 
-const ItemCount = (props) => {
+export const ItemCount = ({cantidad, modify, max}) => {
 
-    const [contador, setContador] = useState(props.initial); 
-    
-    // function aumentar() {
-    //     contador < props.stock ? setContador(contador + 1)
-    // };
-
-    // function restar() {
-    //     contador > 0 ? setContador(contador - 1)
-    // };
-
-    function aumentar (){
-        setContador(contador + 1)
-    }
-    function restar (){
-        setContador(contador - 1)
+    const aumentar = () => {
+        if (cantidad < max){
+            modify(cantidad + 1)
+        }
+        
+    } 
+    const restar = () => {
+        if (cantidad > 0) {
+            modify(cantidad - 1)
+        }
+        
     }
     return ( 
         <Container fluid>
         
-        <button onClick={restar}>-</button>
-        <p>{contador}</p>
-        <button onClick={aumentar}>+</button>
-        <p>Stock disponible: {props.stock}</p>
-        <button>Agregar al carrito</button>
-        
+        <button 
+            classname="btn btn-primary"
+            onClick={restar}>
+            -
+        </button>
+        <span classname="mx-3">{cantidad}</span>
+        <button
+            classname="btn btn-primarys" 
+            onClick={aumentar}>
+            +
+        </button>
+        <button >Agregar al carrito</button>
         </Container>
      );
 }
