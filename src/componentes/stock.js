@@ -1,7 +1,3 @@
-import {mochila} from '././assets/mochila.jpg'
-import {riñonera} from '././assets/riñonera.jpg'
-import {billetera} from '././assets/biletera.jpg'
-import {agenda} from '././assets/agenda.jpg'
 
 export const stock =[
     {
@@ -9,8 +5,8 @@ export const stock =[
         name: "Mochila",
         description: "Mochila de cuero vacuno",
         price: 8950,
-        img: {mochila},
-        stock:4
+        img: "https://via.placeholder.com/220",        category: 'carteras',
+        stock:4,
     },
 
     {
@@ -18,23 +14,26 @@ export const stock =[
         name:"Riñonera",
         description:"Riñonera de cuero vacuno",
         price:6790,
-        img:{riñonera},
-        stock:7
+        img: "https://via.placeholder.com/220",
+        category: 'carteras',
+        stock:7,
     },
     {
         id:3,
         name:"Billetera",
         description:"Billetera de cuero vacuno",
         price:4230,
-        img:{billetera},
-        stock:3
+        img: "https://via.placeholder.com/220",
+        category: 'accesorios',
+        stock:3,
     },
     {
         id:4,
         name:"Agenda",
-        description:"Agendaa de cuero vacuno",
+        description:"Agenda de cuero vacuno",
         price:5200,
-        img:{agenda},
+        img: "https://via.placeholder.com/220",
+        category: 'accesorios',
         stock:2,
     }
 ]

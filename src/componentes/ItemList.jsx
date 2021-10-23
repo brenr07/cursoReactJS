@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Item from './Item'
-
+import {Item} from './Item'
 // function ItemLIst() {
 
 //     const [items,setItems]=useState([]);

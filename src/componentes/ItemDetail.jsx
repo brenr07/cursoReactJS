@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router';
+import { CartContext } from '../CartContext';
+import { ItemCount } from './itemCount';
 
-export const ItemDetail = ({id, name, price, img, description, category}) => {
+export const ItemDetail = ({id, name, price, img, description, category, stock}) => {
     const {goBack, push} = useHistory()
+
+    const {addToCart} = useContext(CartContext)
 
     const [cantidad, setCantidad] = useState(0)
 
-    const AddToCart = () => {
+    const handleAgregar = () => {
         const newItem = {
             id,
             name,
@@ -14,6 +18,7 @@ export const ItemDetail = ({id, name, price, img, description, category}) => {
             category,
             cantidad
         }
+        addToCart(newItem)
     }
     return (
         <div className="container">
@@ -22,9 +27,10 @@ export const ItemDetail = ({id, name, price, img, description, category}) => {
             <p>{description}</p>
             <h4>Precio: ${price}</h4>
 
-            <ItemCount cantidad={cantidad} modify={setCantidad}/>
+            <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
+            
 
-            <button className="btn btn-success" onClick={AddToCart}>Agregar al carrito</button>
+            <button className="btn btn-success" onClick={handleAgregar}>Agregar al carrito</button>
 
             <hr></hr>
 

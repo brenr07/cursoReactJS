@@ -31,7 +31,7 @@ export const ItemCount = ({cantidad, modify, max}) => {
             onClick={aumentar}>
             +
         </button>
-        <button >Agregar al carrito</button>
+        {/* <button >Agregar al carrito</button> */}
         </Container>
      );
 }

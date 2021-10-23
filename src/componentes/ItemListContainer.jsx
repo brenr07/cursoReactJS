@@ -23,7 +23,8 @@
 
 // export default ItemListContainer;
 
-import React, {useEffect, useState, useParams} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router'
 import { pedirProductos } from './pedirProductos';
 import { ItemList } from './ItemList';
 

@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,} from 'react';
+import{useParams} from 'react-router'
 import {ItemDetail} from './ItemDetail';
+import {pedirProductos} from './pedirProductos'
 
 export const ItemDetailContainer = () => {
     const [item, setItem] = useState (null)
