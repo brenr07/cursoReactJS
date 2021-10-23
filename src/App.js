@@ -1,15 +1,11 @@
 import React from 'react';
 import Header from './Header';
-// import ItemCount from './componentes/itemCount';
 import {ItemListContainer} from './componentes/ItemListContainer';
 import { BrowserRouter,Route, Switch } from "react-router-dom";
 import { Container } from 'react-bootstrap';
-import { CartProvider } from './CartContext';
-import { Provider } from 'react';
+import { CartProvider } from './componentes/CartContext';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer';
-import {useState} from 'react'
-import {CartContext} from './CartContext'
-import {CartScreen} from './CartScreen'
+import {CartScreen} from './componentes/CartScreen'
 
 
 
