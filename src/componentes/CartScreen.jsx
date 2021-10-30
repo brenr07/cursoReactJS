@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { CartContext } from './CartContext'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const CartScreen = () => {
     const {carrito, vaciarCarrito, removeItem,calcularTotal} = useContext(CartContext)
@@ -26,7 +28,7 @@ export const CartScreen = () => {
                             <h4>{prod.name}</h4>
                             <p>Cantidad: {prod.cantidad}</p>
                             <p>Precio: {prod.price * prod.cantidad}</p>
-                            <button className="btn btn-danger" onClick={() => removeItem(prod.id)}>X</button>
+                            <button className="btn btn-danger" onClick={() => removeItem(prod.id)}><FontAwesomeIcon icon={faTrashAlt}/></button>
                         </div>
                     )) 
                     }

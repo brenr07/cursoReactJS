@@ -7,7 +7,9 @@ import { CartContext } from './CartContext';
 const CartWidget = () => {
     const {calcularCantidad} = useContext(CartContext)
     return (
-        <div> 
+        <div style={{
+            display: calcularCantidad() === 0 ? "none" : "block"
+        }}> 
         <FontAwesomeIcon icon={faShoppingCart} />
         <span>{calcularCantidad}</span>
         </div>

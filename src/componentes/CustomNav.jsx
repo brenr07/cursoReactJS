@@ -19,7 +19,7 @@ const CustomNav = () => {
                 <NavLink activeClassName={'activeLink'} exact to="/productos/carteras">Carteras</NavLink>
                 <NavLink activeClassName={'activeLink'} exact to="/productos/accesorios">Accesorios</NavLink>
                 <NavLink activeClassName={'activeLink'} exact to="/contacto">Contacto</NavLink>
-                <Link to="/carrito"><CartWidget/></Link>
+                <NavLink activeClassName={'activeLink'} exact to="/carrito"><CartWidget/></NavLink>
         
         </Nav>
      );
