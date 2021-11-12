@@ -6,7 +6,6 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const CartScreen = () => {
     const {carrito, vaciarCarrito, removeItem,calcularTotal} = useContext(CartContext)
-    console.log(carrito)
 
     return (
         <div className="container my-5">
@@ -27,7 +26,7 @@ export const CartScreen = () => {
                         <div>
                             <h4>{prod.name}</h4>
                             <p>Cantidad: {prod.cantidad}</p>
-                            <p>Precio: {prod.price * prod.cantidad}</p>
+                            <p>Precio:$ {prod.price * prod.cantidad}</p>
                             <button className="btn btn-danger" onClick={() => removeItem(prod.id)}><FontAwesomeIcon icon={faTrashAlt}/></button>
                         </div>
                     )) 
@@ -35,6 +34,8 @@ export const CartScreen = () => {
             
                     <hr/>
                     <h2>Total: ${calcularTotal()} </h2>
+                    <Link className="btn btn-success mx-3" to='/checkout'>Terminar mi compra</Link>
+                    <hr/>
                     <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar Carrito</button>
                 </>
             }

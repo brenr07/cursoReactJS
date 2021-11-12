@@ -17,7 +17,7 @@ const Header = () => {
                 </Brand>
                 <Toggle />
                 <Collapse>
-                    <CustomNav />
+                    <CustomNav/>
                 </Collapse>
             </Container>
         </Navbar>

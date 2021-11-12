@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router';
 import {getFirestore} from '../firebase/config';
-import { pedirProductos } from './pedirProductos';
 import { ItemList } from './ItemList'
 
 
@@ -33,7 +32,7 @@ export const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-        <section className="container my-5">
+        <section className="container my-6">
             {
                 loading
                 ? <h2>Cargando...</h2>

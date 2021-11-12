@@ -1,39 +1,38 @@
-import React from "react";
-import { useState } from 'react';
-import Container from 'react-bootstrap/Container';
+
+import React from 'react'
 
 
-export const ItemCount = ({cantidad, modify, max}) => {
+export const ItemCount = ( {cantidad, modify, max} ) => {
 
-    const aumentar = () => {
-        if (cantidad < max){
-            modify(cantidad + 1)
-        }
-        
-    } 
-    const restar = () => {
-        if (cantidad > 0) {
+    const handleRestar = () => {
+        if (cantidad > 1)  {
             modify(cantidad - 1)
         }
-        
     }
-    return ( 
-        <Container fluid>
-        
-        <button 
-            classname="btn btn-primary"
-            onClick={restar}>
-            -
-        </button>
-        <span classname="mx-3">{cantidad}</span>
-        <button
-            classname="btn btn-primarys" 
-            onClick={aumentar}>
-            +
-        </button>
-        {/* <button >Agregar al carrito</button> */}
-        </Container>
-     );
+
+    const handleSumar = () => {
+        if (cantidad < max) {
+            modify(cantidad + 1)
+        }
+    }
+
+    return (
+        <div>
+            <button
+                onClick={handleRestar}
+                className={`btn ${cantidad === 1 ? "btn-danger desactivado" : "btn-secondary"}`}
+            >
+                -
+            </button>
+
+            <span className="mx-3">{cantidad}</span>
+
+            <button
+                onClick={handleSumar}
+                className={`btn ${cantidad === max ? "btn-danger desactivado" : "btn-secondary"}`}
+            >
+                +
+            </button>
+        </div>
+    )
 }
- 
-export default ItemCount;

@@ -6,6 +6,8 @@ import { Container } from 'react-bootstrap';
 import { CartProvider } from './componentes/CartContext';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 import {CartScreen} from './componentes/CartScreen'
+import {Checkout} from './componentes/Checkout'
+import Footer from'./Footer'
 
 
 
@@ -24,13 +26,14 @@ function App() {
 
                     <Route exact path="/detail/:itemId" component={ItemDetailContainer}/>
 
-                    <Route exact path="/Contacto"><h1>Contacto</h1></Route>
+                    <Route exact path="/cart" component={CartScreen}/>
 
-                    <Route exact path="/Carrito" component={CartScreen}/>
+                    <Route exact path="/checkout" component={Checkout}/>
 
 
                 </Switch>
             </Container>
+            <Footer/>
         </BrowserRouter>
         </CartProvider> 
         </>
