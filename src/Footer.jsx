@@ -1,3 +1,5 @@
+import '../estilo.css'
+
 
 const Footer = () => {
     return ( 
